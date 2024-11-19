@@ -287,19 +287,42 @@ export default function CatHoroscopeForm() {
       
 
       <Dialog open={showHoroscope} onOpenChange={setShowHoroscope}>
-  <DialogContent className="sm:max-w-[500px] overflow-scroll bg-gray-900 bg-opacity-80 backdrop-blur-sm backdrop-filter border-0">
-    <DialogHeader>
-      <DialogTitle className="text-white font-bold ">
-        {form.getValues("recipient") === "human"
-          ? "Horóscopo Humano del Día"
-          : "Horóscopo Felino del Día"}
-      </DialogTitle>
-    </DialogHeader>
-    <Card className="bg-gray-900 bg-opacity-80 backdrop-blur-sm backdrop-filter text-white p-6 border-0">
-      {renderHoroscopeContent()}
-    </Card>
-  </DialogContent>
-</Dialog>
+      <DialogContent 
+        className="sm:max-w-[500px] 
+                    w-[95%] 
+                    max-h-[90vh] 
+                    overflow-y-auto 
+                    bg-gray-900 
+                    bg-opacity-80 
+                    backdrop-blur-sm 
+                    backdrop-filter 
+                    border-0
+                    rounded-lg
+                    shadow-2xl"
+      >
+        <DialogHeader>
+          <DialogTitle className="text-white font-bold text-2xl text-center">
+            {form.getValues("recipient") === "human"
+              ? "Horóscopo Humano del Día"
+              : "Horóscopo Felino del Día"}
+          </DialogTitle>
+        </DialogHeader>
+        
+        <Card 
+          className="bg-transparent 
+                     text-white 
+                     p-6 
+                     border-0 
+                     max-h-[70vh] 
+                     overflow-y-auto 
+                     scrollbar-thin 
+                     scrollbar-thumb-gray-700 
+                     scrollbar-track-gray-900"
+        >
+          {renderHoroscopeContent()}
+        </Card>
+      </DialogContent>
+    </Dialog>
 
       
     </div>

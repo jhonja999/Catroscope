@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/dialog";
 import { Card } from "@/components/ui/card";
 import { HoroscopeGenerator } from "@/lib/horoscopeGenerator";
+/* import { HoroscopeHumanGenerator } from "@/lib/horoscopeHumanGenerator"; */
 
 const formSchema = z.object({
   catName: z.string().min(1, "Por favor ingresa el nombre del gato"),

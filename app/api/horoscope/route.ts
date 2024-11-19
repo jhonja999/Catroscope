@@ -3,16 +3,16 @@ import { NextResponse } from 'next/server';
 import { HoroscopeGenerator } from '@/lib/horoscopeGenerator';
 
 // Marcar explícitamente como ruta dinámica
-export const dynamic = 'force-dynamic';
+/* export const dynamic = 'force-dynamic'; */
 export const runtime = 'edge'; // Opcional: usar el runtime de edge para mejor rendimiento
 
 const generator = new HoroscopeGenerator();
 
 export async function POST(request: Request) {
   try {
-    const { name } = await request.json();
+    const { catname } = await request.json();
     
-    if (!name || typeof name !== 'string') {
+    if (!catname || typeof name !== 'string') {
       return NextResponse.json(
         { 
           success: false, 

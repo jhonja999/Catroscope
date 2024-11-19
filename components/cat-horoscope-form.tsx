@@ -106,15 +106,21 @@ export default function CatHoroscopeForm() {
 
   const renderHoroscopeContent = () => {
     if (!horoscopeData) return null;
-
+  
     return (
       <div className="space-y-4">
-        <p className="text-lg font-medium text-yellow-400">
-          {horoscopeData.dailyMessage}
+        {/* Mensaje diario con emoji */}
+        <p className="text-lg font-medium text-yellow-400 flex items-center space-x-2">
+          <span>🌟</span>
+          <span>{horoscopeData.dailyMessage}</span>
         </p>
-
+  
         <div className="space-y-2">
-          <h3 className="font-semibold text-gray-300">Actividades del día:</h3>
+          {/* Actividades del día */}
+          <h3 className="font-semibold text-gray-300 flex items-center space-x-2">
+            <span>🗓️</span>
+            <span>Actividades del día:</span>
+          </h3>
           {horoscopeData.activities.map((activity, index) => (
             <div key={index} className="pl-4">
               <p className="text-gray-200">• {activity.prediction}</p>
@@ -125,9 +131,7 @@ export default function CatHoroscopeForm() {
                     <span
                       key={i}
                       className={`h-2 w-3 rounded-full mx-0.5 ${
-                        i < activity.favorability
-                          ? "bg-purple-500"
-                          : "bg-gray-600"
+                        i < activity.favorability ? "bg-purple-500" : "bg-gray-600"
                       }`}
                     />
                   ))}
@@ -136,33 +140,47 @@ export default function CatHoroscopeForm() {
             </div>
           ))}
         </div>
-
+  
+        {/* Lugar de suerte */}
         <div>
-          <h3 className="font-semibold text-gray-300">Lugar de suerte:</h3>
+          <h3 className="font-semibold text-gray-300 flex items-center space-x-2">
+            <span>🍀</span>
+            <span>Lugar de suerte:</span>
+          </h3>
           <p className="pl-4 text-gray-200">• {horoscopeData.luckySpot}</p>
         </div>
-
+  
+        {/* Compatibilidad */}
         <div>
-          <h3 className="font-semibold text-gray-300">Compatibilidad:</h3>
+          <h3 className="font-semibold text-gray-300 flex items-center space-x-2">
+            <span>❤️</span>
+            <span>Compatibilidad:</span>
+          </h3>
           <p className="pl-4 text-gray-200">
             • Hoy te llevarás bien con:{" "}
             {horoscopeData.compatibility.join(" y ")}
           </p>
         </div>
-
+  
+        {/* Consejo del día */}
         <div>
-          <h3 className="font-semibold text-gray-300">Consejo del día:</h3>
+          <h3 className="font-semibold text-gray-300 flex items-center space-x-2">
+            <span>💡</span>
+            <span>Consejo del día:</span>
+          </h3>
           <p className="pl-4 text-gray-200">• {horoscopeData.advice}</p>
         </div>
-
+  
+        {/* Nivel de suerte */}
         <div className="mt-4 text-center">
           <span className="text-sm text-yellow-400">
-            Nivel de suerte: {horoscopeData.luckLevel}/10
+            🔮 Nivel de suerte: {horoscopeData.luckLevel}/10
           </span>
         </div>
       </div>
     );
   };
+  
 
   return (
     <div className="w-full max-w-md text-white">

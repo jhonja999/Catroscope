@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import CatHoroscopeForm from "@/components/cat-horoscope-form";
 import { CatIcon, Star, Sparkles } from "lucide-react";
 
@@ -88,8 +88,9 @@ export default function Home() {
 
           {/* Descripción con animación de desvanecimiento */}
           <p className="text-center text-lg text-gray-300 max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-            ¡Descubre los secretos del universo para tu compañero felino! 
-            Deja que las estrellas guíen las aventuras, siestas y momentos de juego de tu gatito con nuestras predicciones personalizadas.
+            ¡Descubre los secretos del universo para tu compañero felino! Deja
+            que las estrellas guíen las aventuras, siestas y momentos de juego
+            de tu gatito con nuestras predicciones personalizadas.
           </p>
 
           {/* Formulario */}
@@ -104,6 +105,41 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+<footer className="relative bottom-0 w-full py-6 text-center">
+  <div className="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between mb-5">
+    {/* Texto */}
+    <div className="flex items-center space-x-4 flex-col md:flex-row">
+      <p className="text-sm text-gray-400">
+        Gracias Rocko, espero encontrarte.
+      </p>
+        <br/>
+    </div>
+
+    {/* Imagen */}
+    <div className="w-24 h-24 md:w-32 md:h-32 mt-4 md:mt-0 mx-4">
+      <img
+        src="https://i.imgur.com/m7jOExj.jpeg"
+        alt="Rocko"
+        className="w-full h-full rounded-lg opacity-80"
+      />
+    </div>
+
+    {/* Botón */}
+    <div>
+      <a
+        href="https://www.buymeacoffee.com/jjrvm999u"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center px-6 py-2 mt-4 md:mt-0 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300"
+      >
+        Comprar un café ☕
+      </a>
+    </div>
+  </div>
+</footer>
+
     </main>
   );
 }

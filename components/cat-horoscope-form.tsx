@@ -287,7 +287,7 @@ export default function CatHoroscopeForm() {
       
 
       <Dialog open={showHoroscope} onOpenChange={setShowHoroscope}>
-  <DialogContent className="sm:max-w-[600px] bg-gray-900 bg-opacity-80 backdrop-blur-sm backdrop-filter border-0">
+  <DialogContent className="sm:max-w-[500px] overflow-scroll bg-gray-900 bg-opacity-80 backdrop-blur-sm backdrop-filter border-0">
     <DialogHeader>
       <DialogTitle className="text-white font-bold ">
         {form.getValues("recipient") === "human"

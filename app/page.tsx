@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import CatHoroscopeForm from "@/components/cat-horoscope-form";
 import { CatIcon, Star, Sparkles } from "lucide-react";
+import MagicBall from "@/components/MagicBall";
 
 export default function Home() {
   const [showVictory, setShowVictory] = useState(false);
@@ -97,6 +98,11 @@ export default function Home() {
           <div className="w-full max-w-lg animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
             <CatHoroscopeForm />
           </div>
+          {/* Formulario Magic ball*/}
+          <div className="w-full max-w-lg animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 ">
+          <MagicBall />
+          </div>
+          
 
           {/* Frase inspiradora con animación de brillo */}
           <div className="flex items-center space-x-2 text-sm text-gray-400 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
@@ -107,39 +113,38 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-<footer className="relative bottom-0 w-full py-6 text-center">
-  <div className="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between mb-5">
-    {/* Texto */}
-    <div className="flex items-center space-x-4 flex-col md:flex-row">
-      <p className="text-sm text-gray-400">
-        Gracias Rocko, espero encontrarte.
-      </p>
-        <br/>
-    </div>
+      <footer className="relative bottom-0 w-full py-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between mb-5">
+          {/* Texto */}
+          <div className="flex items-center space-x-4 flex-col md:flex-row">
+            <p className="text-sm text-gray-400">
+              Gracias Rocko, espero encontrarte.
+            </p>
+            <br />
+          </div>
 
-    {/* Imagen */}
-    <div className="w-24 h-24 md:w-32 md:h-32 mt-4 md:mt-0 mx-4">
-      <img
-        src="https://i.imgur.com/m7jOExj.jpeg"
-        alt="Rocko"
-        className="w-full h-full rounded-lg opacity-80"
-      />
-    </div>
+          {/* Imagen */}
+          <div className="w-24 h-24 md:w-32 md:h-32 mt-4 md:mt-0 mx-4">
+            <img
+              src="https://res.cloudinary.com/dpm7wowxq/image/upload/v1738915685/rockogeneral_rbsy2g.jpg"
+              alt="Rocko"
+              className="w-full h-full rounded-lg opacity-80"
+            />
+          </div>
 
-    {/* Botón */}
-    <div>
-      <a
-        href="https://www.buymeacoffee.com/jjrvm999u"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center px-6 py-2 mt-4 md:mt-0 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300"
-      >
-        Comprar un café ☕
-      </a>
-    </div>
-  </div>
-</footer>
-
+          {/* Botón */}
+          <div>
+            <a
+              href="https://www.buymeacoffee.com/jjrvm999u"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-2 mt-4 md:mt-0 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300"
+            >
+              Comprar un café ☕
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
